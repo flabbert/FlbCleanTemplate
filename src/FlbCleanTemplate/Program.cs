@@ -13,8 +13,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog((ctx, lc) =>
     {
         lc.Enrich.FromLogContext();
-        lc.MinimumLevel.Override("Microsoft.EntityFrameworkCore", LogEventLevel.Warning);
-        lc.MinimumLevel.Override("Microsoft.AspNetCore.Mvc", LogEventLevel.Warning);
         lc.WriteTo.Console(theme: AnsiConsoleTheme.Sixteen, applyThemeToRedirectedOutput: true, outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}");
     }
 );
