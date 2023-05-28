@@ -7,10 +7,11 @@ https://dusted.codes/dotenv-in-dotnet
 # Appsettings format
 
 as seen in `appsettings.json`
+	
 	"WeatherSettings": {
 		"ServiceName": ""
 	}
 
 to have `ServiceName`filled have the following in the .env file:
-
-###### WeatherSettings__ServiceName=ServiceName
+	
+	WeatherSettings__ServiceName=ServiceName
