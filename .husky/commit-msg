@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+# if this is not a JIRA project, this can be removed
+# this commit msg hook ensures that JIRA ticket id is added to the commit msg
+# Get the current branch name
+current_branch=`git rev-parse --abbrev-ref HEAD`
+
+echo "checking for Jira Ticket Id...."
+
+# Search Jira ID in a pattern such a "feature/ABCD-123-my-feature"
+id=$(echo $current_branch | sed -nE 's,[a-z]+/([A-Z]+-[0-9]+)-.+,\1,p')
+
+echo "Jira ticket id is: $id"
+
+echo "Adding Jira ticket id to commit message"
+
+# only prepare commit message if pattern matched and jiraId was found
+if [[ ! -z $id ]]; then
+ # $1 is the name of the file containing the commit message
+ # Prepend "ABCD-123: "
+ sed -i.bak  -E "1s/^/${id}: /" "$1"
+fi

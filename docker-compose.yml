@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  flbcleantemplate:
+    image: ${DOCKER_REGISTRY-}flbcleantemplate
+    build:
+      context: .
+      dockerfile: src/FlbCleanTemplate/Dockerfile
