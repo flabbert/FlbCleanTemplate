@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Camron Frenzel",
+    "classifications": [
+        "flabbert",
+        "core",
+        "webapi"
+    ],
+    "tags": {
+        "language": "C#",
+        "type": "solution"
+    },
+    "identity": "flabbert Clean Architecture Template",
+    "name": "flbcleantemplate",
+    "shortName": "flbTemplate",
+    "sourceName": "FlbCleanTemplate",
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "exclude": [
+                        ".vs/**",
+                        ".template_config/**"
+                    ]
+                }
+            ]
+        }
+    ]
+}
