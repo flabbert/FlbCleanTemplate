@@ -6,7 +6,7 @@
     <ProjectGuid>f2e1f7f4-b4f5-4beb-a521-ad1a59194318</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>flbcleantemplate</DockerServiceName>
+    <DockerServiceName>FlbCleanTemplate</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
